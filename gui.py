@@ -20,7 +20,9 @@ entryElement.pack()
 def calcEnthalpy():
     element = pm.get("ig." + entryElement.get())
     res = element.h(T = 310 , p = 1 )
-    label.config(text = res)
+    unit = "kJ/kmol"
+    output = "%s %s" %(res , unit)
+    label.config(text = output)
 
 window.geometry("1000x900")
 window.title("ChemLab")
@@ -42,7 +44,7 @@ label.pack()
 
 
 
-#comment to test commit via VScode
+
 
 
 window.mainloop() 
